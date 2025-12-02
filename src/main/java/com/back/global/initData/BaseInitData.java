@@ -13,9 +13,9 @@ public class BaseInitData {
     private final PostService postService;
 
     @Bean
-    ApplicationRunner baseInitDataApplicationRunner(){
+    ApplicationRunner baseInitDataApplicationRunner() {
         return args -> {
-            if(postService.count() > 0) return;
+            if (postService.count() > 0) return;
 
             Post post1 = postService.write("제목 1", "내용 1");
             Post post2 = postService.write("제목 2", "내용 2");
